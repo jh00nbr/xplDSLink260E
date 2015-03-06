@@ -24,7 +24,7 @@ else:
         os.system('clear')
         print (" [ DSLink 260E - Defaut Password DNS Change ]")
         print (" [ Changing DNS through GET method with default password ]")
-        print (" [ Author: Jhonathan Davi ]")
+        print (" [ Author: Jhonathan Davi | insightsecs at gmail.com | Twitter @jh00nbr ]")
 
         ip = sys.argv[1]
 
