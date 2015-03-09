@@ -9,7 +9,6 @@
 import requests
 import os
 import sys
-import base64
 
 class bcolors:
     OKGREEN = '\033[92m'
