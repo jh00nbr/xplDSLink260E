@@ -1,6 +1,6 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
-#Author: Jhonathan Davi jhoon | insightsecs at gmail.com | Twitter @jh00nbr
+#Author: Jhonathan Davi A.K.A jh00nbr | insightsecs at gmail.com | Twitter @jh00nbr
 #Inurl Brasil: blog.inurl.com.br | fb.com/InurlBrasil
 
 #DSLink 260E - Defaut Password DNS Change
